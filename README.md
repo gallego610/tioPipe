@@ -1,5 +1,6 @@
 # Proyecto Base Implementando Clean Architecture
 
+
 ## Antes de Iniciar
 
 Empezaremos por explicar los diferentes componentes del proyectos y partiremos de los componentes externos, continuando con los componentes core de negocio (dominio) y por último el inicio y configuración de la aplicación.
@@ -45,3 +46,19 @@ Los entry points representan los puntos de entrada de la aplicación o el inicio 
 Este módulo es el más externo de la arquitectura, es el encargado de ensamblar los distintos módulos, resolver las dependencias y crear los beans de los casos de use (UseCases) de forma automática, inyectando en éstos instancias concretas de las dependencias declaradas. Además inicia la aplicación (es el único módulo del proyecto donde encontraremos la función “public static void main(String[] args)”.
 
 **Los beans de los casos de uso se disponibilizan automaticamente gracias a un '@ComponentScan' ubicado en esta capa.**
+
+
+
+
+
+
+
+## Tienda de Tio Pipe
+Se ha solicitado un programa informatico para la tienda de comidas rapidas Tio Pepe, esta tienda tiene locales en 6 ciudades del pais y en cada local ofrece al menos un plato de comida diferente de acuerdo a la región, también tiene ventas en todos ellos de Salchipapas, Hamburguesas, Wraps y Jugos.
+
+Ademas de las Ventas en el Restaurante, realiza ventas a domicilio y venta de insumos para preparar los platos. El sistema debe ofrecer, ademas de los listados de platos e ingredientes (minimo 5 ingredientes por plato), las opciones de Venta en Sitio, Venta a Domicilio, Venta por App y Venta de Ingredientes, también una opción para conocer las ventas durante un mes en particular y una factura, que posee un consecutivo, la identificación del cliente, el tipo de Venta realizada y los productos vendidos.
+
+![TioPipe](./resource/model.drawio.png)
+
+
+
