@@ -63,15 +63,15 @@ Ademas de las Ventas en el Restaurante, realiza ventas a domicilio y venta de in
 
 
 
-#Casos de Uso
+# Casos de Uso
 
-###Consultar Lista de Platos
+### Consultar Lista de Platos
 Se expone servicio para la consulta de los platos de cada uno de los locales, para realizar la consulta se debe enviar el id con el que fue registrado el local y con este se retornan los Platos disponibles(Productos que son Platos)
 
 - http://localhost:8080/api/listPlatos/{IdLocal}
 <br> ![TioPipe](./resource/ListaPlatos.png)
 
-###Consultar Lista de Insumos
+### Consultar Lista de Insumos
 Se expone servicio para la consulta de los insumos ofrecidos en cada uno de los locales, para realizar la consulta se debe enviar el id con el que fue registrado el local y con este se retorna la lista de insumos disponibles(Productos que son insumos)
 
 -http://localhost:8080/api/listIngredientes/3
