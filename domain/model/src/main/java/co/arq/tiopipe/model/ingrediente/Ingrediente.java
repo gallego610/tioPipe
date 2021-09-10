@@ -1,16 +1,21 @@
 package co.arq.tiopipe.model.ingrediente;
 
+import java.math.BigDecimal;
+
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 
 @Data
 @AllArgsConstructor
-@Builder(toBuilder = true)
 public class Ingrediente {
 
 	private String id;
 	private String nombre;
-	private String costo;
+	private BigDecimal costo;
+
+	@Override
+	public String toString() {
+		return "\n\n\t\t Nombre=" + nombre + "\n\t\t Costo=" + costo;
+	}
 
 }

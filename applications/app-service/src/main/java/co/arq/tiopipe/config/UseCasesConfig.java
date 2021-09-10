@@ -1,14 +1,18 @@
 package co.arq.tiopipe.config;
 
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.FilterType;
+
+import co.arq.tiopipe.model.local.gateways.LocalRepository;
+import co.arq.tiopipe.usecase.consultarplatos.ConsultarPlatosUseCase;
 
 @Configuration
-@ComponentScan(basePackages = "co.arq.tiopipe.usecase",
-        includeFilters = {
-                @ComponentScan.Filter(type = FilterType.REGEX, pattern = "^.+UseCase$")
-        },
-        useDefaultFilters = false)
 public class UseCasesConfig {
+
+	@Bean
+	public ConsultarPlatosUseCase consultarPlatosUseCase(LocalRepository localRepository) {
+		return new ConsultarPlatosUseCase(localRepository);
+	}
+	
+
 }

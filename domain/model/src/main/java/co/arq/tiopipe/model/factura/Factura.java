@@ -1,5 +1,6 @@
 package co.arq.tiopipe.model.factura;
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 
 import co.arq.tiopipe.model.local.Local;
@@ -19,6 +20,6 @@ public class Factura {
 	private Local local;
 	private List<Producto> productos;
 	private BigDecimal costoTotalFactura;
-	private BigDecimal cuponDescuento;
+	private Date fecha;
 	
 }
